@@ -11,7 +11,7 @@ int main()
 
 void print_bits ( unsigned char byte)
 {
-    for(int i =sizeof(unsigned char)*8 ;i>=0;i--)
+    for(int i =sizeof(unsigned char)*8-1 ;i>=0;i--)
     {
        if((byte>>i)&1==1)
         printf("1");
