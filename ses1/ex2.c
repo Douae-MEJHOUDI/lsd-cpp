@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void printBits ( unsigned char byte);
+void print_bits ( unsigned char byte);
 
 int main()
 {
