@@ -3,7 +3,7 @@
 
 /////PROTOTYPES :
 void check_msb(int num);
-void printBits ( unsigned char byte);
+void print_bits ( unsigned char byte);
 
 
 /////FUNCTIONS: 
@@ -22,7 +22,7 @@ void check_msb(int num)
 
 void print_bits ( unsigned char byte)
 {
-    for(int i =sizeof(unsigned char)*8 ;i>=0;i--)
+    for(int i =sizeof(unsigned char)*8-1 ;i>=0;i--)
     {
        if((byte>>i)&1==1)
         printf("1");
