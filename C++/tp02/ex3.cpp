@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector> 
 
-#define ct 5
-
 
 using namespace std;
 
@@ -16,17 +14,23 @@ template <typename T>
 T powrec(T a, int n);
 void show_matrix (matrix a);
 matrix poww(matrix a);
+matrix matpownaive(matrix a, int n);
 
 ////////////////Main:
 int main()
 {
     int n=4;
+	
     matrix a = initialize(n,2);
-    //matrix b = initialize(n,3);
     show_matrix(a);
     cout<<endl;
-    //show_matrix(b);
-    //show_matrix(multiply(a,b));
+	
+    cout<<"pownaive"<<endl;
+    matrix d= matpownaive(a,3);
+    show_matrix(d);
+	
+    
+    cout<<"powrec"<<endl;
     matrix c = powrec(a, 3);
     show_matrix(c);
     return 0;
@@ -86,4 +90,10 @@ T powrec(T a, int n)
     return multiply(a,poww(powrec(a,n/2)));
 }
 
-
+matrix matpownaive(matrix a, int n)
+{
+	matrix x= a;
+	for(int i=0;i<n-1;i++)
+		x=multiply (x,a);
+	return x;
+}
