@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
-#include "class.hpp"
-#include "class.cpp"
+
+#include "contact.hpp"
+#include "Phonebook.hpp"
 
 using namespace std;
 
